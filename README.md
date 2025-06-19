@@ -1,4 +1,7 @@
 # Caso de Estudio: Detección de Operadores Ineficaces en un Servicio de Telefonía Virtual
+
+## ES Español
+
 Descripción del proyecto:
 
 La empresa de telefonía virtual CallMeMaybe buscaba identificar operadores con bajo rendimiento para optimizar la atención al cliente. Como analista de datos, lideré un proyecto de análisis exploratorio para encontrar operadores ineficaces basándome en múltiples indicadores operativos.
@@ -110,4 +113,126 @@ El nuevo sistema de recomendaciones mejora la atracción inicial del usuario.
 Se recomienda iterar sobre el embudo de compras para mejorar conversión en las etapas posteriores.
 
 La prueba A/B fue válida, aunque se sugiere una muestra más grande para confirmar efectos en compras.
+
+
+# Case Study: Detection of Inefficient Operators in a Virtual Telephone Service
+
+## US English
+
+Project description:
+
+The virtual telephone company CallMeMaybe sought to identify underperforming operators to optimize customer service. As a data analyst, I led an exploratory analysis project to find ineffective operators based on multiple operational indicators.
+
+## Project Objectives
+Conduct exploratory data analysis (EDA) to understand operational behavior.
+
+Establish metrics to determine operational inefficiency.
+
+Identify underperforming operators.
+
+Validate hypotheses through statistical testing.
+
+## Data Sources and Structure
+1. telecom_dataset_us.csv
+
+Information about incoming, outgoing, and internal calls.
+
+Key variables:
+
+operator_id, calls_count, is_missed_call, call_duration, total_call_duration, internal, direction
+
+2. telecom_clients_us.csv
+
+Customer information:
+
+user_id, tariff_plan, date_start
+
+## Criteria for Evaluating Inefficiency
+A high proportion of missed incoming calls (especially external).
+
+High waiting time (difference between total_call_duration and call_duration).
+
+A low number of outgoing calls for operators whose job includes making them.
+
+Filtering and grouping by the operator to compare relative performance.
+
+## Tools Used
+Python (Pandas, Seaborn, SciPy)
+
+Jupyter Notebook
+
+Hypothesis testing: t-test and Mann-Whitney U test
+
+Visualization: Matplotlib, Seaborn
+
+## Exploratory Analysis and Results
+Operators with more than 40% of missed calls were considered critical.
+
+It was detected that some operators had an average wait time of> 40% of the total call duration.
+
+Operators assigned to outgoing tasks with a very low rate of calls made were identified.
+
+## Conclusions and Recommendations
+The most inefficient operators were listed for review by Human Resources and Supervision.
+
+It was recommended that operator assignments be adjusted based on call traffic.
+
+It was proposed that automatic alerts be developed to detect inefficient operators in real-time.
+
+
+## Case Study: Evaluation of an A/B Test for a Recommendation System
+Project description:
+
+An international online store conducted an A/B test to evaluate a new recommendation system. The task was resumed after being abandoned by the previous team. My goal was to validate the quality of the experiment and analyze its results.
+
+## Study Objectives
+Validate the design and execution of the A/B test.
+
+Analyze conversions at each stage of the funnel (product_page → product_card → purchase).
+
+Determine whether there were significant improvements in conversion thanks to the new system.
+
+## Data Used
+Dataset    Description
+final_ab_new_users_upd_us.csv    New users and their characteristics
+final_ab_events_upd_us.csv    User interaction events
+final_ab_participants_upd_us.csv    Participants and their test group
+ab_project_marketing_events_us.csv    Marketing campaign calendar
+
+## Tools Used
+Python (Pandas, NumPy, SciPy)
+
+Graphics: Plotly, Seaborn
+
+Statistical tests: Z-test for comparison of proportions
+
+Experiment management: Verification of user overlap, distribution of events by day
+
+## Pre-Analysis Validations
+Type conversion and handling of null values.
+
+Verification that there were no users in both groups.
+
+Confirmation that the distribution of events per day and user was similar between groups.
+
+Review of concurrent marketing events that could skew the results.
+
+## Analysis Results
+A 12% improvement in the product page visit rate was found in group B.
+
+The product_card and purchase rates also improved, but only reached statistical significance in the first stage (product_page).
+
+Group B showed higher retention, but more observation time was recommended to validate purchases.
+
+## Conclusions and Recommendations
+The new recommendation system improves initial user engagement.
+
+It is recommended to iterate on the purchase funnel to improve conversion in later stages.
+
+The A/B test was valid, although a larger sample size is suggested to confirm the effects on purchases.
+
+
+
+
+
 
